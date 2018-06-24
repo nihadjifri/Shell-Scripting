@@ -1,0 +1,23 @@
+1) if you type:
+
+Cal 92
+
+You will get the calendar for the year 92 rather than 1992.produce a shell script called nicecal that will default to the 21st century if the parameter is less than 50 and to the 20th century if the parameter is between 50 and 99.
+
+2) Produce a shell script called filetest that tests whether a file (that is passed as a parameter )exists.is a plain file, and is readable. If the file satisfies all these criteria. The script should execute an exit 0. Otherwise it should execute an exit 1.
+
+Produce a shell script called nicecat that takes a filename as a parameter. It should execute a filetest command, and then it should test file value of the status variable. If the variable has the value 0,nicecat should use cat to display the file’s contents. Otherwise, it should display an error message.
+
+3) Produce a shell script called plusx which adds execute permission to each of the files passed as a parameter. If no parameters are passed, issue a warning and exit the script.
+
+4) Produce a shell script called nicerm which works through the files of the current directory. It outputs the name of each file, reads a replay from the standard input, and if the replay is y or Y , it removes the file. If the file is getting deleted, output a statement saying so. NOTE : create a temperory and some files under it to test your script. Running this script on directory containg useful files could be a disaster!
+
+5) Produce a shell script called lslong which does an ls –l for the files passed as parameter to the script. However ,if there are no parameters, lslong reads a line from the user containing the names of the files that are to be passed to ls –l.
+
+6) produce a shell script called sizes that for each filename passed as a parameter display only the filename and the size of the file in bytes.
+
+7) Produce a script that asks user for inputting a number. Determine if the number is less than 0 or between 0 and 100 or greater than 100 and write the result out.
+
+8) produce a shell script that computes the sum of integers lessthan n while n is the script argument. Use while loop to accomplish this.
+
+9) Produce a shell script to copy all files from one directory to another, if input directory contains any subdirectories, do not copy them but issue a warning,Also ,it should not copy any so-called (hidden) dot files (do not attempt to use cp –r command as it would copy dot files as well).

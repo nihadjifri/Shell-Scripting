@@ -1,0 +1,110 @@
+Answer 1:
+File name: nicecal
+#!/bin/bash
+if [ $1 -lt 50 ]
+then
+y=`echo "21$1"`
+cal $y
+elif [ $1 -gt 50 ] && [ $1 -lt 99 ]
+then
+y=`echo "20$1"`
+cal $y
+fi
+////////////////////////////////
+Answer 2:
+File name: filetest
+#!/bin/bash
+if [ -r $1 ]
+then
+exit 0
+else
+exit 1
+fi
+////////////////////////////////
+file name: nicecat
+#!/bin/bash
+./filetest $1
+if [ $? -eq 0 ]
+then
+cat $1
+else
+echo "File not found"
+fi
+////////////////////////////////
+Answer 3:
+Filename: plusx
+#!/bin/bash
+if [ $# = 0 ]
+then
+echo "No Parameter Found"
+exit 1
+else
+chmod u+x $@
+fi
+///////////////////////////////
+Answer 4:
+File name: nicerm
+#!/bin/bash
+ls
+read -p "Do you want to Delete all files" r
+if [ $r = 'y' ] || [ $r = 'Y' ]
+then
+echo "Deleting files"
+rm *
+echo "Deleted files successfully"
+fi
+//////////////////////////////
+Answer 5:
+Filename:lslong
+#!/bin/bash
+if [ $# = 0 ]
+then
+read -p "Enter names of the files :" names
+ls -l $names
+else
+ls -l $@
+fi
+//////////////////////////////
+Answer 6:
+Filename : sizes
+#!/bin/bash
+ls -nl $@ | awk '{print $5,"\t",$9}'
+////////////////////////////////////////////
+Answer 7: 
+Filename :numbers (not working cuz >= , <= , < not supported in bash)
+#!/bin/bash
+read -p "Enter the number" num
+if [ $num < 0 ]
+then
+echo "Less than ZERO"
+elif [ $num >= 0 ] && [ $num <= 100 ]
+then
+echo "Between 0 and 100"
+else
+echo "Greater than 100"
+fi
+//////////////////////////////////
+filename :numbers1: (Working)
+#!/bin/bash
+read -p "Enter the number" num
+if [ $num -lt 0 ]
+then
+echo "Less than ZERO"
+elif [ $num -ge 0 ] && [ $num -le 100 ]
+then
+echo "Between 0 and 100"
+else
+echo "Greater than 100"
+fi
+////////////////////////////////////////////////////////////
+Answer 8:
+Filename: while
+#!/bin/bash
+i=0
+sum=0
+while [ $i -le $1 ]
+do
+sum=`expr $sum + $i`
+i=`expr $i + 1`
+done
+echo sum = $sum
