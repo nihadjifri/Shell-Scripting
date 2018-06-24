@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+#ls -l $@ | cut -d " " -f 5,9
+ls -nl $@ | awk '{print $5,"\t",$9}'
+

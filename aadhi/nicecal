@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+if [ $1 -lt 50 ]
+then
+	y=`echo "21$1"`
+	cal $y
+elif [ $1 -gt 50 ] && [ $1 -lt 99 ]
+then
+	y=`echo "20$1"`
+	cal $y
+fi
+	

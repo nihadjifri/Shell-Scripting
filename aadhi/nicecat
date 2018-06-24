@@ -1,0 +1,10 @@
+#!/bin/bash
+
+./filetest $1
+
+if [ $? -eq 0 ]
+then
+	cat $1
+else
+	echo "File not found"
+fi

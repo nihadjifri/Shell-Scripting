@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ls
+
+read -p "Do you want to Delete all files" r
+if [ $r = 'y' ] || [ $r = 'Y' ]
+then
+	echo "Deleting files"
+	rm *
+	echo "Deleted files successfully"
+fi
+
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+read -p "Enter the number" num
+
+if [ $num < 0 ]
+then
+	echo "Less than ZERO"
+elif [ $num >= 0 ] && [ $num <= 100 ]
+then
+	echo "Between 0 and 100"
+else
+	echo "Greater than 100"
+fi

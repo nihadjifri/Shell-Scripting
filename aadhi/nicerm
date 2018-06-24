@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo $@
+
+read -p "Enter your replay" r
+if [ $r = 'y' ] || [ $r = 'Y' ]
+then
+	echo "Deleting file : $@"
+	rm $@
+fi
+
+
