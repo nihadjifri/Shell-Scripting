@@ -1,4 +1,4 @@
-Guys, the first fact that i want to make u clear is,
+Hi, the first fact that i want to make u clear is,
 
 what is a command and what is an executable file.
 
@@ -38,40 +38,35 @@ another temperrory file.
 so here in this repository/project i have a simple c program (program.c) that prints something to the 
 standard output. i have compiled the same to another name "test"
 $vi program.c
---------------------------------------------------
+
 #include<stdio.h>
 int main()
 {
         printf("C program : Started Execution\n");
 }
--------------------------------------------------
+
 $gcc program.c -o test
 
 also i have a script file named "script" that calls our executable file "test" from the same directory 
 and redirecting the output to another temperrory file named "temp.txt"
 $vi script
-----------------------------------------------------
+
 #!/bin/bash
 
 echo "Script : calling C program from our script\n";
 ./test > temp.txt
-----------------------------------------------------
 
 now to execute the script first provide the execution permission for your script:
 $chmod u+x ./script
 
 now execute the script:
 $./script
---------------------------------------------------
 Script : calling C program from our script
---------------------------------------------------
 
 it will give us echo output but no output from our c program cuz we have already redirected the output
 now to see the output check the content of our temperrory file "temp.txt"
 $cat temp.txt
-----------------------------------------------------
 C program : Started Execution
-----------------------------------------------------
 
 hope the concepts are clear, feel free to ask your doubts in comments section.
 I'll be happy to get back to you as soon as possible.
