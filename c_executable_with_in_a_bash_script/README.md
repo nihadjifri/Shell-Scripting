@@ -49,6 +49,7 @@ $gcc program.c -o test
 
 also i have a script file named "script" that calls our executable file "test" from the same directory 
 and redirecting the output to another temperrory file named "temp.txt"
+
 $vi script
 
 #!/bin/bash
@@ -57,14 +58,17 @@ echo "Script : calling C program from our script\n";
 ./test > temp.txt
 
 now to execute the script first provide the execution permission for your script:
+
 $chmod u+x ./script
 
 now execute the script:
+
 $./script
 Script : calling C program from our script
 
 it will give us echo output but no output from our c program cuz we have already redirected the output
 now to see the output check the content of our temperrory file "temp.txt"
+
 $cat temp.txt
 C program : Started Execution
 
